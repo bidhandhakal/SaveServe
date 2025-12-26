@@ -1,4 +1,5 @@
 import { createPost, getPosts } from './actions'
+import PostForm from './PostForm'
 
 export default async function Home() {
   const posts = await getPosts()
@@ -12,26 +13,7 @@ export default async function Home() {
 
         <div className="mb-12 p-6 border border-zinc-800 rounded-lg bg-zinc-900/50">
           <h2 className="text-xl font-semibold mb-4">Create a New Post</h2>
-          <form action={createPost} className="flex flex-col gap-4">
-            <input
-              type="text"
-              name="title"
-              placeholder="Post Title"
-              className="p-3 rounded bg-zinc-800 border border-zinc-700 focus:border-purple-500 outline-none transition-colors"
-              required
-            />
-            <textarea
-              name="content"
-              placeholder="Write something..."
-              className="p-3 rounded bg-zinc-800 border border-zinc-700 focus:border-purple-500 outline-none transition-colors min-h-[100px]"
-            />
-            <button
-              type="submit"
-              className="bg-purple-600 hover:bg-purple-700 text-white font-medium py-3 px-6 rounded transition-colors self-end"
-            >
-              Publish Post
-            </button>
-          </form>
+          <PostForm />
         </div>
 
         <div className="grid gap-6">
