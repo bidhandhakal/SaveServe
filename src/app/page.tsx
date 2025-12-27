@@ -1,7 +1,11 @@
+import HeroSection from "@/components/features/landing/HeroSection";
+
 export default function Home() {
   return (
-    <div>
-      <div>Hello, SaveServe!</div>
-    </div>
+    <main>
+      <div>
+        <HeroSection />
+      </div>
+    </main>
   );
 }
