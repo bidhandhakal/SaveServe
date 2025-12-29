@@ -130,7 +130,7 @@ export default function MainNav() {
                 variant="circle-blur"
                 start="top-right"
               />
-              <div className="h-6 w-[1px] bg-neutral-200 dark:bg-neutral-800" />
+              <div className="h-6 w-px bg-neutral-200 dark:bg-neutral-800" />
             </>
           )}
 
@@ -178,7 +178,7 @@ export default function MainNav() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.2 }}
-            className="bg-background/95 fixed inset-0 top-[88px] z-40 flex h-[calc(100vh-88px)] flex-col gap-6 overflow-y-auto p-6 backdrop-blur-sm md:hidden"
+            className="bg-background/95 fixed inset-0 top-22 z-40 flex h-[calc(100vh-88px)] flex-col gap-6 overflow-y-auto p-6 backdrop-blur-sm md:hidden"
           >
             <div className="flex flex-col gap-4">
               {navItems.map((item) => (
